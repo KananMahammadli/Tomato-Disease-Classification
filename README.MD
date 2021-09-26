@@ -11,11 +11,11 @@ The aim of this project is to classify tomato diseases based on their leaves tha
 ---
 ## Requirements
 This project requires **Python** and the following Python libraries installed:
-- [NumPy](https://pypi.org/project/numpy/)
-- [matplotlib](https://pypi.org/project/matplotlib/)
-- [tensorflow](https://pypi.org/project/tensorflow/)
-- [opencv](https://pypi.org/project/opencv-python/)
-- [PyQt5](https://pypi.org/project/PyQt5/)
+- [NumPy](https://numpy.org/)
+- [matplotlib](https://matplotlib.org/)
+- [tensorflow](https://www.tensorflow.org/)
+- [opencv](https://opencv.org/)
+- [PyQt5](https://riverbankcomputing.com/software/pyqt)
 
 Instead of manually installing the libraries, you can install all of them with `requirements.txt`. Here is how it works:<br />
 ```bash
