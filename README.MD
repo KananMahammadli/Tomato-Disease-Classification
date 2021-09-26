@@ -60,7 +60,7 @@ Our CNN architecture consist of 3 feature extraction blocks (each has Conv2D lay
   <img src='https://user-images.githubusercontent.com/53794602/134777446-acbe21e9-9aee-449f-819e-902952e4c565.png' />
 </p>
 
-* Click the **Upload** button to see the image on the App and then click **Predict** button to see predicted label at the top center of the image
+* Click the **Upload Image** button to see the image on the App and then click **Predict** button to see predicted label at the top center of the image
 <p align="center">
   <img src='https://user-images.githubusercontent.com/53794602/134777509-a97af4a1-d91c-489e-9884-d3960aa9a802.png' />
   <img src='https://user-images.githubusercontent.com/53794602/134777517-25a7a5b5-191c-4a27-bd3d-b8970ce8dbc9.png' />
