@@ -1,5 +1,5 @@
 # Tomato Disease Classification
-The aim of this project is to classify tomato diseases based on their leaves that can be very useful in the agriculture. To be more user-friendly, a simple GUI hass been created so that users can interact with the App to upload the images of their tomato leaves and find the diseases. This App can find healthy tomatoes and 9 different diseases.
+The aim of this project is to classify tomato diseases based on their leaves that can be very useful in the agriculture. To be more user-friendly, a simple GUI has been created so that users can interact with the App to upload the images of their tomato leaves and find the diseases. This App can find healthy tomatoes and 9 different diseases.
 
 ---
 ## Table of Contents
