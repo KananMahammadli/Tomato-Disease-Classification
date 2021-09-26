@@ -60,13 +60,13 @@ Our CNN architecture consist of 3 feature extraction blocks (each has Conv2D lay
   <img src='https://user-images.githubusercontent.com/53794602/134777446-acbe21e9-9aee-449f-819e-902952e4c565.png' />
 </p>
 
-* Click the upload **button** to see the image on the App and then click **predict** button to see predicted label at the top center of the image
+* Click the **Upload** button to see the image on the App and then click **Predict** button to see predicted label at the top center of the image
 <p align="center">
   <img src='https://user-images.githubusercontent.com/53794602/134777509-a97af4a1-d91c-489e-9884-d3960aa9a802.png' />
   <img src='https://user-images.githubusercontent.com/53794602/134777517-25a7a5b5-191c-4a27-bd3d-b8970ce8dbc9.png' />
 </p>
 
-* To close the app you can use either the **quit** button or the close sign
+* To close the app you can use either the **Quit** button or the close sign
 <p align="center">
   <img src='https://user-images.githubusercontent.com/53794602/134777527-209f989b-0b82-4576-a036-a7633f29b389.png' />
 </p
