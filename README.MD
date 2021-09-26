@@ -10,7 +10,7 @@ The aim of this project is to classify tomato diseases based on their leaves tha
 - [App Usage Example](#app-usage)
 ---
 ## Requirements
-This project requires **Python** and the following Python libraries installed:
+This project requires [Python3.8](https://www.python.org/downloads/release/python-380/) and the following Python libraries installed:
 - [NumPy](https://numpy.org/)
 - [matplotlib](https://matplotlib.org/)
 - [tensorflow](https://www.tensorflow.org/)
