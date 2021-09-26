@@ -36,15 +36,11 @@ C:> py get-pip.py
 ## How to Run
 After installing all the libraries properly, put `Tomato Disease Classification - GUI.ipynb` and `model_tomato.h5` in the same directory and open the folder containing these files in the terminal or command window. Then run this code:
 ```bash
-ipython notebook boston_housing.ipynb
+ipython notebook 'Tomato Disease Classification - GUI.ipynb'
 ```  
 or
 ```bash
-jupyter notebook boston_housing.ipynb
-```
-or open with Juoyter Lab
-```bash
-jupyter lab
+jupyter notebook 'Tomato Disease Classification - GUI.ipynb'
 ```
 
 ## Data and the Code
