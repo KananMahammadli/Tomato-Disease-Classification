@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QPushButton, QMessageBox, QFileDialog, QVBoxLayout, QHBoxLayout
-from PyQt5.QtGui import QPixmap, QIcon, QFont
+from PyQt5.QtGui import QPixmap, QIcon, QFont, QFontDatabase
 from PyQt5 import QtCore
 import sys
 import base64
@@ -12,10 +12,10 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
         # creating our window
         self.setWindowIcon(QIcon('./photos/logo.png'))
-        self.setGeometry(200, 200, 800, 800)
+        self.setGeometry(100, 100, 600, 900)
         self.setWindowTitle('Tomato Disease Classification')
         self.setAcceptDrops(True)
-        self.setStyleSheet("MainWindow {border-image: url('./photos/background.jpg');}")
+        self.setStyleSheet("MainWindow {border-image: url('./photos/background.jpg')}")
         self.timer = QtCore.QTimer(self)
         self.timer.timeout.connect(self.displayDateTime)
         self.timer.start(1000)
@@ -37,33 +37,34 @@ class MainWindow(QMainWindow):
         |             |   quit button         |  date and time  |
         |-------------------------------------------------------|
         """
-
+        self.font = QFont("Montserrat-Medium", 14)
         self.description = QLabel("Please upload (or drag and drop) 3D tomato leaf image\nAccepted formats: .png, .jpg, .jpeg, .bmp, .webp")
-        self.description.setFont(QFont('Monstserrat', 11))
+        self.description.setFont(self.font)
         self.image_label = QLabel()
         self.image_label.setPixmap(QPixmap('./photos/drop.jpg').scaled(512, 512, QtCore.Qt.KeepAspectRatio, QtCore.Qt.SmoothTransformation))
         self.image_label.adjustSize()
         self.image_label.setStyleSheet('background-color: rgb(255, 255, 255);border-radius: 10px;')
         self.predicted_label = QLabel()
         self.predicted_label.setText(f'Predicted: No image uploaded yet\nCondidence score: No image uploaded yet')
-        self.predicted_label.setFont(QFont('Monstserrat', 11))
+        self.predicted_label.setFont(QFont("Montserrat-Medium", 16))
         self.datetime = QLabel()
         self.widget = QWidget()
 
+        self.button_size = QtCore.QSize(200, 60)
         self.upload_button = QPushButton('Upload Image')
         self.upload_button.clicked.connect(self.click_upload)
-        self.upload_button.setFont(QFont('Monstserrat', 8))
-        self.upload_button.setFixedSize(QtCore.QSize(150, 35))
+        self.upload_button.setFont(self.font)
+        self.upload_button.setFixedSize(self.button_size)
         
         self.predict_button = QPushButton('Predict')
         self.predict_button.clicked.connect(self.click_predict)
-        self.predict_button.setFont(QFont('Arial', 8))
-        self.predict_button.setFixedSize(QtCore.QSize(150, 35))
+        self.predict_button.setFont(self.font)
+        self.predict_button.setFixedSize(self.button_size)
 
         self.quit_button = QPushButton('Quit')
         self.quit_button.clicked.connect(self.click_quit)
-        self.quit_button.setFont(QFont('Monstserrat', 8))
-        self.quit_button.setFixedSize(QtCore.QSize(150, 35))
+        self.quit_button.setFont(self.font)
+        self.quit_button.setFixedSize(self.button_size)
 
         """
         We have 3 main vertical boxes that will be added to horizontal box and it will be set to our widget;
@@ -121,32 +122,34 @@ class MainWindow(QMainWindow):
         self.date = QtCore.QDateTime.currentDateTime()
         displayText = self.date.toString(QtCore.Qt.DefaultLocaleLongDate)
         self.datetime.setText(displayText)
-        self.datetime.setFont(QFont('Monstserrat', 11))
+        self.datetime.setFont(self.font)
 
     # when predict button clicked, image will be sent for prediction to our deployed model
     # and result will be set to predicted_label
     def click_predict(self):
-        with open(self.imagepath, "rb") as f:
-            im_bytes = f.read()        
-
-        api = "http://localhost:8080/predict_request"
-        im_b64 = base64.b64encode(im_bytes).decode("utf8")
-        headers = {"Content-type": "application/json", "Accept": "text/plain", "key":"59367"}
-  
-        payload = json.dumps({"image": im_b64})
-        response = requests.post(api, data=payload, headers=headers)
         try:
+            with open(self.imagepath, "rb") as f:
+                im_bytes = f.read()        
+
+            api = "http://46.101.214.183//predict_request"
+            im_b64 = base64.b64encode(im_bytes).decode("utf8")
+            headers = {"Content-type": "application/json", "Accept": "text/plain", "key":"59367"}
+    
+            payload = json.dumps({"image": im_b64})
+            response = requests.post(api, data=payload, headers=headers)
+        
             if "wrong dim" in response.json():
                 self.predicted_label.setText(response.json()["wrong dim"])
-                self.predicted_label.adjustSize()
+                    
             else:
                 data = response.json()
                 label = data['label']    
                 score = data['confidence score']
                 self.predicted_label.setText(f'Predicted: {label}\nCondidence score: {score}')
-                self.predicted_label.adjustSize()        
-        except requests.exceptions.RequestException as e:
-            return response.text, e
+            self.predicted_label.adjustSize()        
+
+        except:
+            self.image_label.setPixmap(QPixmap('./photos/drop.jpg').scaled(512, 512, QtCore.Qt.KeepAspectRatio, QtCore.Qt.SmoothTransformation))
 
     # showing message box for confirmation of closing the app when close - x clicked
     def closeEvent(self, event):
@@ -170,7 +173,11 @@ class MainWindow(QMainWindow):
     def click_upload(self):
         filename = QFileDialog.getOpenFileName(self, 'Open File', '.', "Image file(*.jpg *.jpeg *.png *.bmp *.webp)")
         self.imagepath = filename[0]
-        self.image_label.setPixmap(QPixmap(self.imagepath).scaled(512, 512, QtCore.Qt.KeepAspectRatio, QtCore.Qt.SmoothTransformation))
+        if self.imagepath == 'QPixmap::scaled: Pixmap is a null pixmap':
+            pass
+        
+        else:
+            self.image_label.setPixmap(QPixmap(self.imagepath).scaled(512, 512, QtCore.Qt.KeepAspectRatio, QtCore.Qt.SmoothTransformation))
 
     # accepting drag event if it has image object and file format is in correct form
     def dragEnterEvent(self, event):
@@ -205,7 +212,8 @@ class MainWindow(QMainWindow):
 
        
 def main():
-    app = QApplication(sys.argv)
+    app = QApplication(sys.argv)    
+    QFontDatabase.addApplicationFont("fonts/Montserrat-Medium.ttf")
     win = MainWindow()
     sys.exit(app.exec_())
 
