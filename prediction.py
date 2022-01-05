@@ -46,11 +46,11 @@ def model_predict(img_bytes):
     # make sure image had 3 dimesnions and 3d dimension is 3
     if len(img_arr.shape) != 3:
         log.debug(f'image shape: {img_arr.shape}')
-        return {"label": f"Wrong image dimension: image should be 3d, but received {len(img_arr.shape)}", "confidence score": "None"}
+        return {"label": f"Image should be 3d, but received {len(img_arr.shape)}", "confidence score": "None"}
 
     elif img_arr.shape[2] != 3:
         log.debug(f'image shape: {img_arr.shape}')
-        return {"label": f"Wrong image dimension: 3rd dimension of image should be 3, but received {img_arr.shape[2]}", "confidence score": "None"}
+        return {"label": f"3rd dimension of image should be 3, but received {img_arr.shape[2]}", "confidence score": "None"}
 
     img_arr = np.expand_dims(img_arr, axis=0)
     preds = decoder(model.predict(img_arr))
