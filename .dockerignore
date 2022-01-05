@@ -1,0 +1,6 @@
+# avoid unnecessary files being added inside the docker, and save space
+README.md
+*.cache
+*.log
+.git
+__pycache__

@@ -45,7 +45,7 @@ $(document).ready(function () {
                 // Get and display the result
                 $('.loader').hide();
                 $('#result').fadeIn(600);
-                $('#result').text(' Result:  ' + data);
+                $('#result').html(" Result:  " + data["label"] +  "<br/>Confidence score:  " + data["confidence score"]);
                 console.log('Success!');
             },
         });

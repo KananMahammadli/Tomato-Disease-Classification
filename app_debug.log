@@ -1,0 +1,182 @@
+2022-01-05 15:31:15,209 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:31:15,435 - tomato-disease-classification - DEBUG - cannot identify image file <_io.BytesIO object at 0x0000019810EB64A0>
+2022-01-05 15:31:15,435 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:31:25,666 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:31:25,705 - tomato-disease-classification - DEBUG - image shape: (64, 64, 4)
+2022-01-05 15:31:25,706 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:32:18,498 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:32:18,504 - tomato-disease-classification - DEBUG - unhashable type: 'numpy.ndarray'
+2022-01-05 15:32:18,505 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:39:07,459 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:39:07,465 - tomato-disease-classification - DEBUG - a bytes-like object is required, not 'FileStorage'
+2022-01-05 15:39:07,465 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:42:41,195 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:42:41,203 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:42:41,229 - tomato-disease-classification - DEBUG - unhashable type: 'numpy.ndarray'
+2022-01-05 15:42:41,230 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:43:11,923 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:43:11,927 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:43:11,960 - tomato-disease-classification - DEBUG - image shape: (64, 64, 4)
+2022-01-05 15:43:11,960 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:44:41,505 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:44:41,509 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:44:41,510 - tomato-disease-classification - DEBUG - Reading Image
+2022-01-05 15:44:41,538 - tomato-disease-classification - DEBUG - Readed image
+2022-01-05 15:44:41,540 - tomato-disease-classification - DEBUG - unhashable type: 'numpy.ndarray'
+2022-01-05 15:44:41,540 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:47:03,204 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:47:03,209 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:47:03,210 - tomato-disease-classification - DEBUG - Reading Image
+2022-01-05 15:47:03,236 - tomato-disease-classification - DEBUG - Readed image
+2022-01-05 15:47:03,237 - tomato-disease-classification - DEBUG - image type: <class 'PIL.JpegImagePlugin.JpegImageFile'>
+2022-01-05 15:47:03,238 - tomato-disease-classification - DEBUG - Start resize
+2022-01-05 15:47:03,240 - tomato-disease-classification - DEBUG - finish resize
+2022-01-05 15:47:03,241 - tomato-disease-classification - DEBUG - start scale
+2022-01-05 15:47:03,241 - tomato-disease-classification - DEBUG - finish scale
+2022-01-05 15:47:03,242 - tomato-disease-classification - DEBUG - unhashable type: 'numpy.ndarray'
+2022-01-05 15:47:03,243 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:49:15,154 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:49:15,160 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:49:15,161 - tomato-disease-classification - DEBUG - Reading Image
+2022-01-05 15:49:15,190 - tomato-disease-classification - DEBUG - Readed image
+2022-01-05 15:49:15,190 - tomato-disease-classification - DEBUG - image type: <class 'PIL.JpegImagePlugin.JpegImageFile'>
+2022-01-05 15:49:15,191 - tomato-disease-classification - DEBUG - Start resize
+2022-01-05 15:49:15,193 - tomato-disease-classification - DEBUG - finish resize
+2022-01-05 15:49:15,194 - tomato-disease-classification - DEBUG - start scale
+2022-01-05 15:49:15,195 - tomato-disease-classification - DEBUG - finish scale
+2022-01-05 15:49:15,196 - tomato-disease-classification - DEBUG - image shape: (64, 64, 3)
+2022-01-05 15:49:15,196 - tomato-disease-classification - DEBUG - start expanding
+2022-01-05 15:49:15,197 - tomato-disease-classification - DEBUG - finish expanding
+2022-01-05 15:49:15,198 - tomato-disease-classification - DEBUG - 'Sequential' object has no attribute 'precict'
+2022-01-05 15:49:15,198 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:51:03,624 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:51:03,630 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:51:03,630 - tomato-disease-classification - DEBUG - Reading Image
+2022-01-05 15:51:03,655 - tomato-disease-classification - DEBUG - Readed image
+2022-01-05 15:51:03,656 - tomato-disease-classification - DEBUG - image type: <class 'PIL.JpegImagePlugin.JpegImageFile'>
+2022-01-05 15:51:03,656 - tomato-disease-classification - DEBUG - Start resize
+2022-01-05 15:51:03,658 - tomato-disease-classification - DEBUG - finish resize
+2022-01-05 15:51:03,659 - tomato-disease-classification - DEBUG - start scale
+2022-01-05 15:51:03,660 - tomato-disease-classification - DEBUG - finish scale
+2022-01-05 15:51:03,660 - tomato-disease-classification - DEBUG - image shape: (64, 64, 3)
+2022-01-05 15:51:03,661 - tomato-disease-classification - DEBUG - start expanding
+2022-01-05 15:51:03,662 - tomato-disease-classification - DEBUG - finish expanding
+2022-01-05 15:51:03,663 - tomato-disease-classification - DEBUG - 'Sequential' object has no attribute 'precict'
+2022-01-05 15:51:03,663 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:53:57,652 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:53:57,658 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:53:57,659 - tomato-disease-classification - DEBUG - Reading Image
+2022-01-05 15:53:57,685 - tomato-disease-classification - DEBUG - Readed image
+2022-01-05 15:53:57,685 - tomato-disease-classification - DEBUG - image type: <class 'PIL.JpegImagePlugin.JpegImageFile'>
+2022-01-05 15:53:57,686 - tomato-disease-classification - DEBUG - Start resize
+2022-01-05 15:53:57,687 - tomato-disease-classification - DEBUG - finish resize
+2022-01-05 15:53:57,688 - tomato-disease-classification - DEBUG - start scale
+2022-01-05 15:53:57,689 - tomato-disease-classification - DEBUG - finish scale
+2022-01-05 15:53:57,690 - tomato-disease-classification - DEBUG - image shape: (64, 64, 3)
+2022-01-05 15:53:57,690 - tomato-disease-classification - DEBUG - start expanding
+2022-01-05 15:53:57,691 - tomato-disease-classification - DEBUG - finish expanding
+2022-01-05 15:53:57,692 - tomato-disease-classification - DEBUG - 'Sequential' object has no attribute 'precict'
+2022-01-05 15:53:57,692 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:55:04,244 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:55:04,250 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:55:04,250 - tomato-disease-classification - DEBUG - Reading Image
+2022-01-05 15:55:04,277 - tomato-disease-classification - DEBUG - Readed image
+2022-01-05 15:55:04,278 - tomato-disease-classification - DEBUG - image type: <class 'PIL.JpegImagePlugin.JpegImageFile'>
+2022-01-05 15:55:04,278 - tomato-disease-classification - DEBUG - Start resize
+2022-01-05 15:55:04,281 - tomato-disease-classification - DEBUG - finish resize
+2022-01-05 15:55:04,281 - tomato-disease-classification - DEBUG - start scale
+2022-01-05 15:55:04,282 - tomato-disease-classification - DEBUG - finish scale
+2022-01-05 15:55:04,283 - tomato-disease-classification - DEBUG - image shape: (64, 64, 3)
+2022-01-05 15:55:04,283 - tomato-disease-classification - DEBUG - start expanding
+2022-01-05 15:55:04,284 - tomato-disease-classification - DEBUG - finish expanding
+2022-01-05 15:55:04,285 - tomato-disease-classification - DEBUG - 'Sequential' object has no attribute 'precict'
+2022-01-05 15:55:04,285 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:56:24,297 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:56:24,303 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:56:24,303 - tomato-disease-classification - DEBUG - Reading Image
+2022-01-05 15:56:24,328 - tomato-disease-classification - DEBUG - Readed image
+2022-01-05 15:56:24,330 - tomato-disease-classification - DEBUG - image type: <class 'PIL.JpegImagePlugin.JpegImageFile'>
+2022-01-05 15:56:24,330 - tomato-disease-classification - DEBUG - Start resize
+2022-01-05 15:56:24,332 - tomato-disease-classification - DEBUG - finish resize
+2022-01-05 15:56:24,333 - tomato-disease-classification - DEBUG - start scale
+2022-01-05 15:56:24,334 - tomato-disease-classification - DEBUG - finish scale
+2022-01-05 15:56:24,334 - tomato-disease-classification - DEBUG - image shape: (64, 64, 3)
+2022-01-05 15:56:24,335 - tomato-disease-classification - DEBUG - start expanding
+2022-01-05 15:56:24,336 - tomato-disease-classification - DEBUG - finish expanding
+2022-01-05 15:57:34,338 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:57:34,343 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:57:38,002 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:57:38,007 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:57:38,033 - tomato-disease-classification - DEBUG - image shape: (64, 64, 4)
+2022-01-05 15:57:38,034 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 15:57:42,139 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:57:42,144 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:57:46,347 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:57:46,351 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:57:50,578 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 15:57:50,583 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 15:57:50,584 - tomato-disease-classification - DEBUG - image shape: (64, 64, 4)
+2022-01-05 15:57:50,585 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 16:01:19,555 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 16:01:19,560 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 16:01:19,587 - tomato-disease-classification - DEBUG - image shape: (64, 64)
+2022-01-05 16:01:19,587 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 16:03:13,853 - tomato-disease-classification - DEBUG - 
+Debug Started...
+2022-01-05 16:03:14,105 - tomato-disease-classification - DEBUG - 
+Debug Finished...!
+2022-01-05 16:03:26,568 - tomato-disease-classification - DEBUG - 
+Debug Started...
+2022-01-05 16:03:26,629 - tomato-disease-classification - DEBUG - 
+Debug Finished...!
+2022-01-05 16:03:50,044 - tomato-disease-classification - DEBUG - 
+Debug Started...
+2022-01-05 16:03:50,059 - tomato-disease-classification - DEBUG - image shape: (64, 64, 4)
+2022-01-05 16:03:50,060 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 16:03:50,061 - tomato-disease-classification - DEBUG - 
+Debug Finished...!
+2022-01-05 19:11:51,599 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 19:11:51,607 - tomato-disease-classification - DEBUG - <class 'bytes'>
+2022-01-05 19:11:51,882 - tomato-disease-classification - DEBUG - 
+Debug finished...!
+2022-01-05 19:13:02,646 - tomato-disease-classification - DEBUG - 
+Debug Started...!
+2022-01-05 19:13:02,707 - tomato-disease-classification - DEBUG - image shape: (64, 64, 4)
+2022-01-05 19:13:02,708 - tomato-disease-classification - DEBUG - 
+Debug finished...!
