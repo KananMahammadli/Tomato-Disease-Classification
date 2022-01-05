@@ -15,7 +15,6 @@ This project requires [Python3.8](https://www.python.org/downloads/release/pytho
 - [matplotlib](https://matplotlib.org/)
 - [tensorflow](https://www.tensorflow.org/)
 - [opencv](https://opencv.org/)
-- [PyQt5](https://riverbankcomputing.com/software/pyqt)
 
 Instead of manually installing the libraries, you can install all of them with `requirements.txt`. Here is how it works:<br />
 ```bash
@@ -34,13 +33,7 @@ C:> py get-pip.py
 ```
 
 ## How to Run
-After installing all the libraries properly, put `Tomato Disease Classification - GUI.ipynb` and `model_tomato.h5` in the same directory and open the folder containing these files in the terminal or command window. Then run this code:
-```bash
-ipython notebook 'Tomato Disease Classification - GUI.ipynb'
-```  
-or
-```bash
-jupyter notebook 'Tomato Disease Classification - GUI.ipynb'
+After installing all the libraries properly, go through `modelling.ipynb` and run cells to train the model.
 ```
 
 ## Data and the Code
@@ -51,23 +44,5 @@ jupyter notebook 'Tomato Disease Classification - GUI.ipynb'
 ## CNN Architecture
 Our CNN architecture consist of 3 feature extraction blocks (each has Conv2D layer with ReLU activation followed by MaxPooling layer) and a heading with Flatten and Dense layer(40 units) followed by softmax activation. Here is the visual intepretation of our architecture:<br />
 <p align="center">
-  <img src='https://user-images.githubusercontent.com/53794602/134776776-c434757a-98d2-45c6-ba83-7b251f0ebc39.png' />
+  ![model-architecture](./photos/model_architecture.png)
 </p>
-
-## App Usage
-* After following the instructions at [How to  Run](#how-to-run), you will see this interface
-<p align="center">
-  <img src='https://user-images.githubusercontent.com/53794602/134777446-acbe21e9-9aee-449f-819e-902952e4c565.png' />
-</p>
-
-* Click the **Upload Image** button to see the image on the App (your image should be in one of these formats: .jpg, .jpeg, .png, .bmp) and then click **Predict** button to see predicted label at the top center of the image
-<p align="center">
-  <img src='https://user-images.githubusercontent.com/53794602/134777509-a97af4a1-d91c-489e-9884-d3960aa9a802.png' />
-  <img src='https://user-images.githubusercontent.com/53794602/134777517-25a7a5b5-191c-4a27-bd3d-b8970ce8dbc9.png' />
-</p>
-
-* To close the app you can use either the **Quit** button or the close sign
-<p align="center">
-  <img src='https://user-images.githubusercontent.com/53794602/134777527-209f989b-0b82-4576-a036-a7633f29b389.png' />
-</p
-
