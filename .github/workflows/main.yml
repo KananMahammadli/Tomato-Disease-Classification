@@ -20,4 +20,6 @@ jobs:
           cd ~/Tomato-Disease-Classification
           git fetch origin
           git reset --hard origin/main
-          docker-compose up --build -d tomato-disease-classifier && docker-compose restart
+          docker stop $(docker ps -a -q)
+          docker build -t tomato-disease-classifier .
+          docker run -p 80:8080 tomato-disease-classifier
