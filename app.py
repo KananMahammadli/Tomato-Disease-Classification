@@ -114,4 +114,4 @@ def get_disease():
 
 
 if __name__ == '__main__':
-    serve(host='0.0.0.0', port=int(os.environ.get("PORT", "8080")))
+    serve(app, host='0.0.0.0', port=int(os.environ.get("PORT", "8080")))
