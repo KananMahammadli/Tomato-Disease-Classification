@@ -15,12 +15,12 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         key: ${{ secrets.SSH_KEY }}
         username: ${{ secrets.SSH_USERNAME }}
-        command_timeout: 200m
  
         script: |
           cd ~/Tomato-Disease-Classification
           git checkout production-web
-          git pull
+          git fetch origin
+          git reset --hard origin/production-web
           docker stop $(docker ps -a -q)
           docker build -t tomato-disease-classifier .
           docker run -p 80:8080 tomato-disease-classifier
