@@ -5,6 +5,7 @@ import base64
 from dotenv import load_dotenv
 from functools import wraps
 from prediction import model_predict
+from waitress import serve
 
 # Flask utils
 from flask import Flask, request, render_template, abort, jsonify
@@ -113,4 +114,4 @@ def get_disease():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    serve(host='0.0.0.0', port=int(os.environ.get("PORT", "8080")))
