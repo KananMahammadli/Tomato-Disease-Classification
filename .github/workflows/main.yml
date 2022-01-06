@@ -19,6 +19,7 @@ jobs:
  
         script: |
           cd ~/Tomato-Disease-Classification
+          git checkout production-web
           git pull
           docker stop $(docker ps -a -q)
           docker build -t tomato-disease-classifier .
