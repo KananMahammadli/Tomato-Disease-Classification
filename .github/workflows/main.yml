@@ -1,0 +1,27 @@
+name: Deploy REST API
+
+on:
+  push:
+    branches: [production-web]
+
+jobs:
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Executing remote ssh commands
+      uses: appleboy/ssh-action@main
+      with:
+        host: ${{ secrets.PRD_HOST }}
+        username: ${{ secrets.PRD_USERNAME }}
+        password: ${{ secrets.PRD_PASSWORD }}
+        port: ${{ secrets.PRD_PORT }}
+        script_stop: true
+        script: |
+          cd ~/Tomato-Disease-Classification
+          git fetch origin
+          git reset --hard origin/main
+          docker build -t tomato-disease-classifier .
+          docker run -p 80:8080 tomato-disease-classifier
