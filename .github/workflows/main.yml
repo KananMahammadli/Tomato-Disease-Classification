@@ -21,6 +21,5 @@ jobs:
           git checkout production-web
           git fetch origin
           git reset --hard origin/production-web
-          docker stop $(docker ps -a -q)
           docker build -t tomato-disease-classifier .
-          docker run -p 80:8080 tomato-disease-classifier
+          docker restart $(docker ps -q)
