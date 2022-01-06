@@ -7,7 +7,6 @@ The aim of this project is to classify tomato diseases based on their leaves tha
 - [How to Run](#how-to-run)
 - [Data and the Code](#data-and-the-code)
 - [CNN Architecture](#cnn-architecture)
-- [App Usage Example](#app-usage)
 ---
 ## Requirements
 This project requires [Python3.8](https://www.python.org/downloads/release/python-380/) and the following Python libraries installed:
@@ -34,7 +33,7 @@ C:> py get-pip.py
 
 ## How to Run
 After installing all the libraries properly, go through `modelling.ipynb` and run cells to train the model.
-```
+
 
 ## Data and the Code
 [Kaggle Tomato leaves data](https://www.kaggle.com/kaustubhb999/tomatoleaf) has been used for this project. In total we have 10 categories: 9 diseases and healthy tomatoes.For each category, there are 10k images to train and 1k images to test our model. All the images have been resized by 64x64 before uploading to the workspace to reduce the size of zip folder containing the images. <br />The project contains 2 notebooks: <br />
@@ -44,5 +43,5 @@ After installing all the libraries properly, go through `modelling.ipynb` and ru
 ## CNN Architecture
 Our CNN architecture consist of 3 feature extraction blocks (each has Conv2D layer with ReLU activation followed by MaxPooling layer) and a heading with Flatten and Dense layer(40 units) followed by softmax activation. Here is the visual intepretation of our architecture:<br />
 <p align="center">
-  ![model-architecture](./photos/model_architecture.png)
+  <img src = ./photos/model_architecture.png>
 </p>
