@@ -12,7 +12,7 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
         # creating our window
         self.setWindowIcon(QIcon('./photos/logo.png'))
-        self.setGeometry(100, 100, 600, 900)
+        self.setGeometry(150, 70, 600, 900)
         self.setWindowTitle('Tomato Disease Classification')
         self.setAcceptDrops(True)
         self.setStyleSheet("MainWindow {border-image: url('./photos/background.jpg')}")
@@ -40,13 +40,19 @@ class MainWindow(QMainWindow):
         self.font = QFont("Montserrat-Medium", 14)
         self.description = QLabel("Please upload (or drag and drop) 3D tomato leaf image\nAccepted formats: .png, .jpg, .jpeg, .bmp, .webp")
         self.description.setFont(self.font)
+
+        self.img_description = QLabel("Make sure Image is 3d and 3rd dimension is also 3")
+        self.img_description.setFont(self.font)
+
         self.image_label = QLabel()
         self.image_label.setPixmap(QPixmap('./photos/drop.jpg').scaled(512, 512, QtCore.Qt.KeepAspectRatio, QtCore.Qt.SmoothTransformation))
         self.image_label.adjustSize()
         self.image_label.setStyleSheet('background-color: rgb(255, 255, 255);border-radius: 10px;')
+
         self.predicted_label = QLabel()
-        self.predicted_label.setText(f'Predicted: No image uploaded yet\nCondidence score: No image uploaded yet')
+        self.predicted_label.setText(f'Result: None\nCondidence score: None')
         self.predicted_label.setFont(QFont("Montserrat-Medium", 16))
+
         self.datetime = QLabel()
         self.widget = QWidget()
 
@@ -86,6 +92,7 @@ class MainWindow(QMainWindow):
 
         self.vbox1.addWidget(self.description, alignment=QtCore.Qt.AlignTop | QtCore.Qt.AlignLeft)
 
+        self.vbox2_1.addWidget(self.img_description, alignment=QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
         self.vbox2_1.addWidget(self.upload_button, alignment=QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
 
         self.vbox2_2.addWidget(self.predicted_label, alignment=QtCore.Qt.AlignTop | QtCore.Qt.AlignCenter)
@@ -145,11 +152,11 @@ class MainWindow(QMainWindow):
                 data = response.json()
                 label = data['label']    
                 score = data['confidence score']
-                self.predicted_label.setText(f'Predicted: {label}\nCondidence score: {score}')
+                self.predicted_label.setText(f'Result: {label}\nCondidence score: {score}')
             self.predicted_label.adjustSize()        
 
         except:
-            self.image_label.setPixmap(QPixmap('./photos/drop.jpg').scaled(512, 512, QtCore.Qt.KeepAspectRatio, QtCore.Qt.SmoothTransformation))
+            pass
 
     # showing message box for confirmation of closing the app when close - x clicked
     def closeEvent(self, event):
@@ -173,12 +180,13 @@ class MainWindow(QMainWindow):
     def click_upload(self):
         filename = QFileDialog.getOpenFileName(self, 'Open File', '.', "Image file(*.jpg *.jpeg *.png *.bmp *.webp)")
         self.imagepath = filename[0]
-        if self.imagepath == 'QPixmap::scaled: Pixmap is a null pixmap':
-            pass
+        if self.imagepath == '':
+            self.predicted_label.setText(f'Result: Image not uploaded\nCondidence score: None')
+            self.image_label.setPixmap(QPixmap('./photos/drop.jpg').scaled(512, 512, QtCore.Qt.KeepAspectRatio, QtCore.Qt.SmoothTransformation))
         
         else:
             self.image_label.setPixmap(QPixmap(self.imagepath).scaled(512, 512, QtCore.Qt.KeepAspectRatio, QtCore.Qt.SmoothTransformation))
-
+            
     # accepting drag event if it has image object and file format is in correct form
     def dragEnterEvent(self, event):
         if event.mimeData().hasImage:
