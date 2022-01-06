@@ -9,16 +9,13 @@ jobs:
     name: Deploy to Production
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    
     - name: Executing remote ssh commands
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@v0.1.2
       with:
-        host: ${{ secrets.PRD_HOST }}
-        username: ${{ secrets.PRD_USERNAME }}
-        password: ${{ secrets.PRD_PASSWORD }}
-        port: ${{ secrets.PRD_PORT }}
-        script_stop: true
+        host: ${{ secrets.SSH_HOST }}
+        key: ${{ secrets.SSH_KEY }}
+        username: ${{ secrets.SSH_USERNAME }}
+ 
         script: |
           cd ~/Tomato-Disease-Classification
           git fetch origin
