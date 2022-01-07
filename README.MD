@@ -1,10 +1,10 @@
 # Tomato Disease Classification
 
-### Project Web App: [46.101.214.183](46.101.214.183)
+### Project Web App: [46.101.214.183](http://46.101.214.183/)
 
 ### Project Desktop App: Download `Install Tomato.exe` file and start installation
 
-The aim of this project is to classify tomato diseases based on their leaves that can be very useful in the agriculture. We have 4 branchs for this project, one for training, one for production of our web app which you can go by following [this link](46.101.214.183). Main branch is where we coommit our changes and merge to production to have continuous deployment with the help of our CI/CD pipeline. To be more user-friendly, Desktop app has also been created so that users can interact with the App to upload the images of their tomato leaves and find the diseases. This App can find healthy tomatoes and 9 different diseases.
+The aim of this project is to classify tomato diseases based on their leaves that can be very useful in the agriculture. We have 4 branchs for this project, one for training, one for production of our web app which you can go by following [this link](http://46.101.214.183/). Main branch is where we coommit our changes and merge to production to have continuous deployment with the help of our CI/CD pipeline. To be more user-friendly, Desktop app has also been created so that users can interact with the App to upload the images of their tomato leaves and find the diseases. This App can find healthy tomatoes and 9 different diseases.
 
 ---
 
@@ -165,7 +165,7 @@ docker run -p 80:8080 tomato-disease-classifer
 
 
 
-Now you can go to the [46.101.214.183](46.101.214.183), to see the same website as we did locally, you can click the upload button to put your tomato leaf image (.png, .jpg, .jpeg, .bmp, .webp formats are allowed), and click the predict button to see the results.
+Now you can go to the [46.101.214.183](http://46.101.214.183/), to see the same website as we did locally, you can click the upload button to put your tomato leaf image (.png, .jpg, .jpeg, .bmp, .webp formats are allowed), and click the predict button to see the results.
 
 
 <p align="center">
