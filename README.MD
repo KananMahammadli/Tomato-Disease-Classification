@@ -59,9 +59,9 @@ We use Flask to crate api for our model to make prediction on the web with user-
  You can use -f flag for a specific folder you want to keep you ssh-key and -t to name your key file. It will generate 2 files: a private key and public key that ends with .pub
 , usually they are stored at ```~/.ssh/``` folder. Now we need to put this key on Github so that we can have an access to our repos. From general settings, go to the SSH and GPG keys, add new SSH key, name it whatever you want, like personel-key and copy contents of public key file we created that ends with .pub and paste it, then create the key. Whenever we clone the repo with SSH key, we can have permanent access so that we don't have to login each time.
 
-- Getting access to Github for local PC<br />
+- Getting access to Github for Digital Ocean<br />
 After you create a droplet inside the project on the Digital Ocean, go to the console and do following on the terminal. Run ```ssh-keygen```, it will create a ssh-key inside ```~.ssh/``` with default name ```id_rsa.pub```. Now we need to create authorized_keys folder and give it permission to help us to connect to the Github. Run the ```cat ~/.ssh/id_rsa.pub``` to see the contents of your public key and copy it, then run ```nano ~/.ssh/authorized_keys``` on the terminal, paste the key, press ctrl + o finish writing, enter to save, then ctrl + x to exit, then run ```chmod 700 ~/.ssh/authorized_keys``` to give permission. We also need to add this key into Github to have access from Digital Ocean, again go to SSH and GKG keys, new SSH key, name it sth like digital-ocean-auth-key, paste the public key and create. <br />
-After handling the authentication we can start the deployment, but before doing the things on the Digital Ocean you can test the docker locally.
+After handling the authentication we can start the deployment, but before doing the things on the Digital Ocean you can test the docker locally.<br />
 - Docker build local<br />
 ```docker build -t tomato-disease-classifier .```
 - Docker run local<br />
@@ -70,18 +70,34 @@ If you get the link and see website like below when you follow the localhost lin
 <p align="center">
   <img src = ./photos/local_web.png>
 </p>
-Since docker working fine locally, we can start doing the process on a Digital Ocean. You can either go to the droplet you created and open console or if you can connect to your project locally by running ```sssh root@ipv4```, instead of ipv4 you have to give the link it provides inside the droplet and put your password (you can also add ssh key to the digital ocean to have permenant access which is much safer). Now run the following commands one-by-one 
-- Clone project into Digital Ocean <br />
-```git clone git@github.com:KananMahammadli/Tomato-Disease-Classification.git```
-- Go to the project <br />
-```cd Tomato-Disease-Classification```
-- Change branch to production <br />
-```git checkout production-web```
+<br />
+Since docker working fine locally, we can start doing the process on a Digital Ocean. You can either go to the droplet you created and open console or if you can connect to your project locally by running ```sssh root@ipv4```, instead of ipv4 you have to give the link it provides inside the droplet and put your password (you can also add ssh key to the digital ocean to have permenant access which is much safer). Now run the following commands one-by-one<br />
+- Clone project into Digital Ocean<br />
+```bash
+git clone git@github.com:KananMahammadli/Tomato-Disease-Classification.git
+```
+<br />
+- Go to the project<br />
+```bash
+cd Tomato-Disease-Classification
+```
+<br />
+- Change branch to production<br />
+```bash
+git checkout production-web
+```
+<br />
 - Start building the docker image<br />
-```docker build -t tomato-disease-classifier .```
-- Run the docker image <br />
-```docker run -p 80:8080 tomato-disease-classifer```
-Now you can go to the [46.101.214.183](46.101.214.183), to see the same website as we did locally, you can click the upload button to put your tomato leaf image (.png, .jpg, .jpeg, .bmp, .webp formats are allowed), and click the predict button to see the results.
+```bash
+docker build -t tomato-disease-classifier .
+```
+<br />
+- Run the docker image<br />
+```bash
+docker run -p 80:8080 tomato-disease-classifer
+```
+<br />
+Now you can go to the [46.101.214.183](46.101.214.183), to see the same website as we did locally, you can click the upload button to put your tomato leaf image (.png, .jpg, .jpeg, .bmp, .webp formats are allowed), and click the predict button to see the results. <br />
 <p align="center">
   <img src = ./photos/web1.png>
 </p>
@@ -101,16 +117,20 @@ First download ```Install Tomato.exe``` file and open it, during the installatio
 <p align="center">
   <img src = ./photos/desk1.png>
 </p>
+<br />
 - Correct Input
 <p align="center">
   <img src = ./photos/desk2.png>
 </p>
+<br />
 - Wrond Image Dimension
-- Desktop App Interface
+<br />
 <p align="center">
   <img src = ./photos/desk3.png>
 </p>
+<br />
 - Quitting the App
+<br />
 <p align="center">
   <img src = ./photos/desk4.png>
 </p>
