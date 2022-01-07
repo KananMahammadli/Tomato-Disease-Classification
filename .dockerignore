@@ -1,6 +1,9 @@
 # avoid unnecessary files being added inside the docker, and save space
-README.md
+__pycache__
+*.github
+photos
 *.cache
 *.log
 .git
-__pycache__
+*.exe
+README.md
