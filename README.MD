@@ -1,6 +1,6 @@
 # Tomato Disease Classification
 
-### Project Web App: [46.101.214.183](http://46.101.214.183/)
+### Project Web App: [http://tomato.kananapps.com/](http://tomato.kananapps.com/)
 
 ### Project Desktop App: Download `Install Tomato.exe` file and start installation
 
