@@ -9,6 +9,7 @@ from waitress import serve
 
 # Flask utils
 from flask import Flask, request, render_template, abort, jsonify
+from flask_cors import CORS
 
 # authenticating with api key
 def get_env_value(env_var_name):
@@ -37,6 +38,7 @@ def create_error_response(message, status_code=400):
 
 # Define a flask app
 app = Flask(__name__)
+CORS(app)
 
 # create a logger
 log = logger.setup_applevel_logger()
