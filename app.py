@@ -37,7 +37,7 @@ def create_error_response(message, status_code=400):
     return resp
 
 # Define a flask app
-app = Flask(__name__)
+app = Flask(__name__, template_folder='./templates', static_folder='./static')
 CORS(app)
 
 # create a logger
@@ -49,8 +49,13 @@ def index():
     # Main page
     return render_template('index.html')
 
+@app.route('/about', methods=['GET'])
+def about():
+    # About page
+    return render_template('about.html')
 
-@app.route('/predict', methods=['GET', 'POST'])
+
+@app.route('/predict', methods=['POST'])
 def upload():
     log.debug("\nDebug Started...!")
     try:

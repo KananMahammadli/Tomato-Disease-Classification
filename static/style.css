@@ -1,0 +1,689 @@
+@media (max-width: 991px) {
+  nav .navigation {
+    display: none !important;
+  }
+  nav .burgerButtonHolder {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  #aboutHeader .text {
+    text-align: center;
+    margin-top: 30px !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  #contact .singleItem:not(.singleItem:first-child) {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .footerItem {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  footer .footerItem:not(.footerItem:first-child) {
+    padding-top: 20px;
+  }
+}
+
+body {
+  background-image: url("../static/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 130%;
+  background-position-y: -140px;
+  min-height: 100vh;
+}
+
+html {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  padding: 20px 0px;
+}
+
+header nav .navbarHolder {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .navbarHolder .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .navbarHolder .logo .iconHolder {
+  display: inline-block;
+}
+
+header nav .navbarHolder .logo .iconHolder .icon {
+  display: inline-block;
+  position: static;
+  width: 4px;
+  height: 22px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: #ef3a3a;
+  -webkit-transform: skew(-15deg);
+          transform: skew(-15deg);
+}
+
+header nav .navbarHolder .logo h6 {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #262626;
+  margin-bottom: 0px;
+  margin-left: 5px;
+}
+
+header nav .navbarHolder .navigation {
+  position: relative;
+}
+
+header nav .navbarHolder .navigation ul {
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  right: 0px;
+  float: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .navbarHolder .navigation ul li:not(li:last-child) {
+  margin-right: 40px;
+}
+
+header nav .navbarHolder .navigation ul li:last-child {
+  margin-left: 20px;
+}
+
+header nav .navbarHolder .navigation ul li {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #262626;
+}
+
+header nav .navbarHolder .navigation ul .predict {
+  text-align: center;
+  color: #ffffff;
+  background-color: #ef3a3a;
+  padding: 10px 31px;
+  border-radius: 40px;
+}
+
+header nav .navbarHolder .burgerButton {
+  width: 30px;
+  height: 5px;
+  background-color: #444444;
+  border-radius: 5px;
+  float: left;
+  position: relative;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+header nav .navbarHolder .burgerButton::after, header nav .navbarHolder .burgerButton::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 5px;
+  background-color: #444444;
+  border-radius: 5px;
+  left: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+header nav .navbarHolder .burgerButton::after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+header nav .navbarHolder .burgerButton::before {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+header nav .navbarHolder .burgerButtonHolder {
+  display: none;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: inherit;
+}
+
+header nav .navbarHolder .openedNav .burgerButton {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+header nav .navbarHolder .openedNav .burgerButton::after {
+  -webkit-transform: rotate(45deg) !important;
+          transform: rotate(45deg) !important;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+header nav .navbarHolder .openedNav .burgerButton::before {
+  -webkit-transform: rotate(-45deg) !important;
+          transform: rotate(-45deg) !important;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+header nav .mobileNavHolder {
+  position: relative;
+}
+
+header nav .mobileNavigation {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  border-style: dashed;
+}
+
+header nav .mobileNavigation ul {
+  list-style: none;
+}
+
+header nav .mobileNavigation ul li {
+  padding-top: 20px;
+  text-align: center;
+}
+
+header nav .mobileNavigation ul li a {
+  margin-top: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #444444;
+}
+
+header nav .mobileNavigation ul li:last-child {
+  padding-bottom: 20px;
+}
+
+header nav .mobileNavigation ul .active a {
+  font-weight: 700 !important;
+}
+
+main #uploadImage {
+  margin-top: 100px;
+  margin-bottom: 80px;
+  padding-bottom: 90px;
+}
+
+main #uploadImage .textHolder {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+main #uploadImage .textHolder .text h4 {
+  font-family: "Red Rose", cursive;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  color: #262626;
+}
+
+main #uploadImage .textHolder .text p {
+  margin-top: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #444444;
+}
+
+main #uploadImage #drop-area {
+  background-color: white;
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  font-family: sans-serif;
+  padding: 60px;
+}
+
+main #uploadImage #drop-area #customForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #uploadImage #drop-area #customForm .imageHolder {
+  margin-top: 10px;
+  text-align: center;
+  max-width: 288px;
+  max-height: 210px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main #uploadImage #drop-area #customForm .imageHolder img {
+  width: 100%;
+}
+
+main #uploadImage #drop-area #customForm .texts p:nth-child(1) {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #444444;
+  margin-top: 24px;
+}
+
+main #uploadImage #drop-area #customForm .texts p:nth-child(2) {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #8e8e8e;
+  margin-top: 10px;
+}
+
+main #uploadImage #drop-area #customForm .loadingArea {
+  display: none;
+  margin-top: 30px;
+}
+
+main #uploadImage #drop-area #customForm .loadingArea .imageName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+main #uploadImage #drop-area #customForm .loadingArea .imageName .name {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #676767;
+  margin: 0;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main #uploadImage #drop-area #customForm .loadingArea .imageName .cancelUpload {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #676767;
+}
+
+main #uploadImage #drop-area #customForm .loadingArea .loadingBar {
+  width: 100%;
+  height: 6px;
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+main #uploadImage #drop-area #customForm .loadingArea .loadingBar .loadingStatus {
+  width: 100%;
+  height: 6px;
+  border-radius: 10px;
+  background: #13a1f1;
+}
+
+main #uploadImage #drop-area #customForm .loadingArea .imageSize {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10px;
+}
+
+main #uploadImage #drop-area #customForm .loadingArea .imageSize .size {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #898989;
+}
+
+main #uploadImage #drop-area #customForm .loadingArea .imageSize .percent {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #898989;
+}
+
+main #uploadImage #drop-area #customForm .resultArea {
+  margin-top: 20px;
+  display: none;
+}
+
+main #uploadImage #drop-area #customForm .resultArea ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main #uploadImage #drop-area #customForm .resultArea ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #uploadImage #drop-area #customForm .resultArea ul li p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #676767;
+}
+
+main #uploadImage #drop-area #customForm .resultArea ul li span {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #262626;
+  padding-right: 5px;
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-left: 5px;
+}
+
+main #uploadImage #drop-area #customForm .button {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px 20px;
+  background: #262626;
+  border-radius: 40px;
+  outline: none;
+  border: 1px solid #262626;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+main #uploadImage #drop-area #customForm .predict {
+  cursor: pointer;
+  display: none;
+  background-color: #ef3a3a;
+  border: 1px solid #ef3a3a;
+}
+
+main #uploadImage #drop-area #customForm .loadingStateForButton {
+  background-color: #ef3a3a;
+  opacity: 0.7;
+}
+
+main #uploadImage #drop-area #customForm #fileElement {
+  display: none;
+}
+
+main #uploadImage #drop-area #customForm progress {
+  display: none;
+}
+
+main #aboutHeader img {
+  width: 100%;
+}
+
+main #aboutHeader .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #aboutHeader .text h2 {
+  font-family: "Red Rose", cursive;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  color: #262626;
+}
+
+main #aboutHeader .text p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+  text-align: justify;
+  margin-top: 25px;
+}
+
+main #aboutHeader .text a {
+  font-family: "Montserrat", sans-serif;
+  max-width: 160px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  padding: 14px 36px;
+  background: #262626;
+  border-radius: 40px;
+  left: 0px;
+  margin-top: 30px;
+}
+
+main #about {
+  margin-top: 103px;
+}
+
+main #about h1 {
+  font-family: "Red Rose", cursive;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #262626;
+}
+
+main #about p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+  text-align: justify;
+  margin-top: 25px;
+}
+
+main #contact {
+  margin-top: 120px;
+  margin-bottom: 110px;
+}
+
+main #contact .headerPart h1 {
+  font-family: "Red Rose", cursive;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #262626;
+}
+
+main #contact .headerPart p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #444444;
+  margin-top: 20px;
+}
+
+main #contact .contactRow {
+  margin-top: 40px;
+}
+
+main #contact .contactRow .singleItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #contact .contactRow .singleItem a {
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #444444;
+}
+
+footer {
+  width: 100%;
+  margin-top: 70px;
+  border-top: 1px solid #f7f7f7;
+  padding: 15px;
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
+}
+
+footer .footerRow {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footerRow .copyright {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #262626;
+  margin-bottom: 0px;
+}
+
+footer .footerRow ul {
+  float: right;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0px;
+}
+
+footer .footerRow ul li:not(li:last-child) {
+  margin-right: 17px;
+}
+/*# sourceMappingURL=style.css.map */
