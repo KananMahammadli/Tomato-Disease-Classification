@@ -18,10 +18,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
         integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+        type="text/css">
     <link rel="stylesheet" href="../static/style.css">
 </head>
 
-<body>
+<body style="background-image: none;">
     <header>
         <nav>
             <div class="container">
@@ -48,9 +50,9 @@
                 <div class="row mobileNavHolder">
                     <div class="col-12 mobileNavigation">
                         <ul>
-                            <li><a href="/about">About the project</a></li>
+                            <li class="active"><a href="/about">About the project</a></li>
                             <li><a href="/about#contact">Contact</a></li>
-                            <li class="predict active"><a href="/">Predict</a></li>
+                            <li class="predict"><a href="/">Predict</a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,64 +61,71 @@
     </header>
 
     <main>
-        <section id="uploadImage">
+        <section id="aboutHeader">
             <div class="container">
-                <div class="row textHolder">
+                <div class="row">
                     <div class="col-lg-6 text">
-                        <h4>
-                            Lorem ipsum dolor sit
-                        </h4>
+                        <h2>TOMATO DISEASE PREDICTION</h2>
+                        <p>Aim of this project is to help people to grow healthy tomatoes at their garden. Deep learning
+                            model has been trained to identify 9 different diseases and healthy tomatoes.</p>
+                        <a href="#about">More</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="../static/images/tomato.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>About the project</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius enim consequat tincidunt
-                            massa ultricies laoreet. Sapien, enim viverra senectus sed fusce amet.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint minima ea quis sed, cupiditate
+                            impedit necessitatibus quaerat eveniet porro! Minus velit alias molestias facere amet
+                            inventore quaerat maxime esse suscipit? Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Eaque esse fugiat, quibusdam suscipit nobis vitae ipsam facere repudiandae nemo
+                            adipisci eos? Ipsa porro non sunt alias iure consectetur impedit deserunt. Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit. Harum unde nulla rem corporis id at libero quibusdam,
+                            dolores voluptatibus fuga nemo, facere modi accusantium? Amet voluptatum pariatur officia
+                            possimus neque.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora laboriosam
+                            molestias numquam in fugit optio ipsam, nesciunt quia ipsum porro qui laudantium nobis,
+                            quaerat dolores nemo iure. Ab, veritatis? Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Quos architecto accusantium illum ab dolorem harum est ratione numquam
+                            esse et omnis quasi dolor recusandae, fugiat perspiciatis illo labore ducimus molestias.
                         </p>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="col-lg-7">
-                        <div id="drop-area">
-                            <form id="customForm" method="post" enctype="multipart/form-data">
-                                <div class="imageHolder">
-                                    <img class="imageHolder" src="../static/images/drag_drop.svg" />
-                                </div>
-                                <div class="texts">
-                                    <p>Drag & Drop</p>
-                                    <p>Upload only png, jpg or jpeg</p>
-                                </div>
-                                <div class="col-lg-6 col-sm-8 col-11">
-                                    <div class="loadingArea">
-                                        <div class="imageName">
-                                            <p class="name"></p>
-                                            <span class="cancelUpload">x</span>
-                                        </div>
-                                        <div class="loadingBar">
-                                            <div class="loadingStatus"></div>
-                                        </div>
-                                        <div class="imageSize">
-                                            <span class="size"></span>
-                                            <span class="percent"></span>
-                                        </div>
-                                    </div>
+        <section id="contact">
+            <div class="container">
+                <div class="row" style="justify-content: center;">
+                    <div class="col-lg-8 headerPart">
+                        <h1>Contact me</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius enim consequat tincidunt
+                            massa ultricies laoreet. Sapien, enim viverra
+                        </p>
+                    </div>
+                </div>
 
-                                    <div class="resultArea">
-
-                                        <ul>
-                                            <li>
-                                                <p>Result:</p>
-                                                <span id="result"></span>
-                                            </li>
-                                            <li>
-                                                <p>Condidence score:</p>
-                                                <span id="confidenceScore"></span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <input type="file" name="file" id="fileElement" accept=".png, .jpg, .jpeg, .webp, .bmp">
-                                <p class="button uploadImage" for="fileElem">Upload image</p>
-                                <p class="button predict loadingStateForButton" id="submitForm"
-                                    for="fileElement">Predict</p>
-                            </form>
-                        </div>
+                <div class="row contactRow">
+                    <div class="col-lg-4 singleItem">
+                        <img src="../static/images/location.svg" alt="">
+                        <a>2464 Royal Ln. Mesa</a>
+                    </div>
+                    <div class="col-lg-4 singleItem">
+                        <img src="../static/images/phone.svg" alt="">
+                        <a href="tel:+9949876532">+994 987 65 32</a>
+                    </div>
+                    <div class="col-lg-4 singleItem">
+                        <img src="../static/images/mail.svg" alt="">
+                        <a href="mailto:kananmahammadli@gmail.com">kananmahammadli@gmail.com</a>
                     </div>
                 </div>
             </div>
@@ -152,6 +161,7 @@
         </footer>
     </main>
 
+    <script src="https://kit.fontawesome.com/5745faddfa.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -161,7 +171,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
         integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="../static/script.js"></script>
+
+    <script>
+        $(".burgerButtonHolder").click(() => {
+            console.log("salam")
+            $(".burgerButtonHolder").toggleClass("openedNav")
+            $(".mobileNavigation").slideToggle()
+        })
+    </script>
 </body>
 
 </html>
