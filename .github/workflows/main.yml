@@ -23,4 +23,4 @@ jobs:
           git reset --hard origin/production-web
           docker stop $(docker container ls -q)
           docker build -t tomato-disease-classifier .
-          docker run -p 80:8008 tomato-disease-classifier
+          docker run -d -p 80:8080 tomato-disease-classifier
