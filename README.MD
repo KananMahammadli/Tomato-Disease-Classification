@@ -69,7 +69,7 @@ Our CNN architecture consist of 3 feature extraction blocks (each has Conv2D lay
 
 
 <p align="center">
-  <img src = ./photos/model_architecture.png>
+  <img src = ./assets/model_architecture.png>
 </p>
 
 ## Deployment to Digital Ocean
@@ -108,7 +108,7 @@ After handling the authentication we can start the deployment, but before doing 
 If you get the link and see website like below when you follow the localhost link, then everything is okay.
 
 <p align="center">
-  <img src = ./photos/local_web.png>
+  <img src = ./assets/local_web.png>
 </p>
 
 Since docker working fine locally, we can start doing the process on a Digital Ocean. You can either go to the droplet you created and open console or if you can connect to your project locally by running ```sssh root@ipv4```, instead of ipv4 you have to give the link it provides inside the droplet and put your password (you can also add ssh key to the digital ocean to have permenant access which is much safer). Now run the following commands one-by-one
@@ -169,10 +169,10 @@ Now you can go to the [46.101.214.183](http://46.101.214.183/), to see the same 
 
 
 <p align="center">
-  <img src = ./photos/web1.png>
+  <img src = ./assets/web1.png>
 </p>
 <p align="center">
-  <img src = ./photos/web2.png>
+  <img src = ./assets/web2.png>
 </p>
 
 ## CI CD Pipeline
@@ -180,7 +180,7 @@ Now you can go to the [46.101.214.183](http://46.101.214.183/), to see the same 
 After deploying our model, it is better to automate the deployment process for the changes in future. We have our yml file to handle this process. We need secrets on Github to access the Digital Ocean. Go to the project settings and select the secrets. We will create 3 secrets. First is ssh key we created on digital ocean, but it should be the private one, not public. Go to Digital Ocean project console and run this `cat ~/.ssh/id_rsa`, and copy the contents. Then go back to the github create new secret, name it as SSH_KEY and paste the key in the value, then create the second key and name it SSH_HOST and put the ipv4 as a value, in our case it is 46.101.214.183, and cretae the last key named SSH_HOST and write root as a value. After compliting you should have these keys below, and then with correct yml, whenever commits are maid to the main branch and merged to production-web it will start the deployment and you can see the process from the actions tab.
 
 <p align="center">
-  <img src = ./photos/keys.png>
+  <img src = ./assets/keys.png>
 </p>
 
 ## Desktop App
@@ -190,22 +190,22 @@ First download `Install Tomato.exe` file and open it, during the installation yo
 - Desktop App Interface
 
 <p align="center">
-  <img src = ./photos/desk1.png>
+  <img src = ./assets/desk1.png>
 </p>
 
 - Correct Input
 <p align="center">
-  <img src = ./photos/desk2.png>
+  <img src = ./assets/desk2.png>
 </p>
 
 - Wrond Image Dimension
 
 <p align="center">
-  <img src = ./photos/desk3.png>
+  <img src = ./assets/desk3.png>
 </p>
 
 - Quitting the App
 
 <p align="center">
-  <img src = ./photos/desk4.png>
+  <img src = ./assets/desk4.png>
 </p>
