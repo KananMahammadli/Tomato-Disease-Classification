@@ -1,6 +1,6 @@
 # Tomato Disease Classification
 
-### Project Web App: [http://tomato.kananapps.com/](http://tomato.kananapps.com/)
+### Project Web App: [link](https://kananmahammadli-improved-orbit-xpwj9jx4v7gf6rgg-2001.preview.app.github.dev/)
 
 ### Project Desktop App: Download `Install Tomato.exe` file and start installation
 
