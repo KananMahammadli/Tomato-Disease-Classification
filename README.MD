@@ -1,12 +1,12 @@
 # Tomato Disease Classification
 Web app view:
 <p align="center">
-  <img src = ./assets/web1.png>
+  <img src = ./assets/web_1.png>
 </p>
 
 Prediction Example:
 <p align="center">
-  <img src = ./assets/web2.png>
+  <img src = ./assets/web_2.png>
 </p>
 
 
