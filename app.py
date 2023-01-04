@@ -1,11 +1,12 @@
-from __future__ import division, print_function
 import os
-import logger
 import base64
-from dotenv import load_dotenv
+
 from functools import wraps
+from dotenv import load_dotenv
 from prediction import model_predict
-from waitress import serve
+#from waitress import serve
+
+import logger
 
 # Flask utils
 from flask import Flask, request, render_template, abort, jsonify
@@ -60,18 +61,17 @@ def upload():
     log.debug("\nDebug Started...!")
     try:
         if request.method != 'POST':
-            log.debug(f"Request method should be POST, but received {request.method}.")
+            log.debug("Request method should be POST, but received {}.".format(request.method))
             log.debug("\nDebug finished...!")
             return create_error_response('bad request [No POST Request]', status_code=403)
 
-        else: 
-            # Get the image from post request as binary and convert bytes data into PIL image object
-            img_bytes = request.files['file'].read()
+        # Get the image from post request as binary and convert bytes data into PIL image object
+        img_bytes = request.files['file'].read()
             
-            # Make prediction
-            preds = model_predict(img_bytes)
-            log.debug("\nDebug finished...!")
-            return preds
+        # Make prediction
+        preds = model_predict(img_bytes)
+        log.debug("\nDebug finished...!")
+        return preds
             
     except Exception as e:
         log.debug(e)
@@ -121,4 +121,5 @@ def get_disease():
 
 
 if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=int(os.environ.get("PORT", "8080")))
+    #serve(app, host='0.0.0.0', port=int(os.environ.get("PORT", "8080")))
+    app.run(host='0.0.0.0', port=8080)
