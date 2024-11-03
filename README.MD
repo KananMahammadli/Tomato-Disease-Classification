@@ -180,10 +180,10 @@ Now you can go to the [46.101.214.183](http://46.101.214.183/), to see the same 
 
 
 <p align="center">
-  <img src = ./assets/web1.png>
+  <img src = ./assets/web_1.png>
 </p>
 <p align="center">
-  <img src = ./assets/web2.png>
+  <img src = ./assets/web_2.png>
 </p>
 
 ## CI CD Pipeline
